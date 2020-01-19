@@ -1,11 +1,10 @@
-using System.ComponentModel.Design;
 using NFluent;
 using NUnit.Framework;
 using SourceProject;
 
 namespace TestProject
 {
-    public class CellStoreTests
+    public class CellTests
     {
         [TestCase(State.Inactive)]
         [TestCase(State.Active)]
