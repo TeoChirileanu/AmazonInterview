@@ -1,3 +1,5 @@
+using System.ComponentModel.Design;
+using NFluent;
 using NUnit.Framework;
 using SourceProject;
 

@@ -7,8 +7,8 @@ namespace ConsoleProject
     {
         public static void Main()
         {
-            Console.WriteLine("Launching main...");
-            var main = new Main();
+            Console.WriteLine("Executing...");
+            var _ = new Main();
             Console.WriteLine("Success!");
         }
     }
