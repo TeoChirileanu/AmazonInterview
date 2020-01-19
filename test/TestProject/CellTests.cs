@@ -8,22 +8,18 @@ namespace TestProject
     {
         [TestCase(State.Inactive)]
         [TestCase(State.Active)]
-        public void ShouldReturnInactive_WhenBothNeighborsHaveTheSameStatus(int upperCellState)
+        public void ShouldReturnInactive_WhenBothNeighborsHaveTheSameStatus(State state)
         {
             // Arrange
-            var upperCell = new Cell(upperCellState);
-            var lowerCell = new Cell(upperCellState);
-            var cell = new Cell(State.Unknown)
-            {
-                UpperCell = upperCell,
-                LowerCell = lowerCell
-            };
+            var upperCell = new Cell(state);
+            var lowerCell = new Cell(state);
+            var cell = new Cell(default, lowerCell, upperCell);
 
             // Act
-            cell.SetNextDayState();
+            var nextDayState = cell.GetNextDayState();
 
             // Assert
-            Check.That(cell.NextDayState).IsEqualTo(State.Inactive);
+            Check.That(nextDayState).IsEqualTo(State.Inactive);
         }
     }
 }

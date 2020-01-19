@@ -1,9 +1,8 @@
 ﻿namespace SourceProject
 {
-    public static class State
+    public enum State
     {
-        public const int Unknown = -1;
-        public const int Inactive = 1;
-        public const int Active = 0;
+        Inactive = 1,
+        Active = 0
     }
 }

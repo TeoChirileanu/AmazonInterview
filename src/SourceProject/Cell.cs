@@ -1,44 +1,26 @@
-﻿namespace SourceProject
+﻿using System;
+
+namespace SourceProject
 {
     public class Cell
     {
-        private int _currentState;
-        private int _nextDayState;
+        private readonly State _currentState;
+        private readonly Cell _lowerCell;
+        private readonly Cell _upperCell;
 
-        public Cell(int currentState)
+        public Cell(State currentState, Cell lowerCell = null, Cell upperCell = null)
         {
             _currentState = currentState;
+            _lowerCell = lowerCell;
+            _upperCell = upperCell;
         }
 
-        public int NextDayState
+        public State GetNextDayState()
         {
-            get => _nextDayState;
-            private set
-            {
-                _currentState = _nextDayState;
-                _nextDayState = value;
-            }
-        }
-
-        public Cell UpperCell { private get; set; }
-        public Cell LowerCell { private get; set; }
-
-        public void SetNextDayState()
-        {
-            // this should be an XOR
-            if (UpperCell._currentState == State.Active && LowerCell._currentState == State.Active)
-            {
-                NextDayState = State.Inactive;
-                return;
-            }
-
-            if (UpperCell._currentState == State.Inactive && LowerCell._currentState == State.Inactive)
-            {
-                NextDayState = State.Inactive;
-                return;
-            }
-
-            NextDayState = State.Active;
+            var lowerCellState = Convert.ToBoolean(_lowerCell?._currentState);
+            var upperCellState = Convert.ToBoolean(_upperCell?._currentState);
+            var haveDifferentStates = lowerCellState ^ upperCellState;
+            return haveDifferentStates ? State.Active : State.Inactive;
         }
     }
 }
