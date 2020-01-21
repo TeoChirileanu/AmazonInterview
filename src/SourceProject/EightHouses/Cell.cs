@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SourceProject
+namespace SourceProject.EightHouses
 {
     public class Cell
     {

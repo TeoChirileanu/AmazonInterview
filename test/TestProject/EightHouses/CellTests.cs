@@ -1,8 +1,8 @@
 using NFluent;
 using NUnit.Framework;
-using SourceProject;
+using SourceProject.EightHouses;
 
-namespace TestProject
+namespace TestProject.EightHouses
 {
     public class CellTests
     {

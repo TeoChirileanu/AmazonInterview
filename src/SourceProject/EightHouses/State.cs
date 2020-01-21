@@ -1,4 +1,4 @@
-﻿namespace SourceProject
+﻿namespace SourceProject.EightHouses
 {
     public enum State
     {

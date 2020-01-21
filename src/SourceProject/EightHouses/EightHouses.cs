@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace SourceProject
+namespace SourceProject.EightHouses
 {
     public class EightHouses
     {

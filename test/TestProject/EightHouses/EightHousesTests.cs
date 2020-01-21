@@ -2,9 +2,9 @@ using System;
 using System.Linq;
 using NFluent;
 using NUnit.Framework;
-using SourceProject;
+using SourceProject.EightHouses;
 
-namespace TestProject
+namespace TestProject.EightHouses
 {
     public class EightHousesTests
     {
@@ -12,7 +12,7 @@ namespace TestProject
         public void ShouldReturnAnArrayWithStates()
         {
             // Arrange
-            var houses = new EightHouses();
+            var houses = new SourceProject.EightHouses.EightHouses();
             var states = GetRandomStates();
             const int days = 5;
 
