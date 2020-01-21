@@ -20,4 +20,8 @@
     <ProjectReference Include="..\..\src\SourceProject\SourceProject.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="EightHouses\NewFolder\" />
+  </ItemGroup>
+
 </Project>
