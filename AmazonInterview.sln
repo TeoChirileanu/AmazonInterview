@@ -11,10 +11,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{4097C308-8
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestProject", "test\TestProject\TestProject.csproj", "{ADA38464-19EA-42B6-A63B-CE6A88BBDE15}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "gui", "gui", "{527BCEFA-4816-4C00-B707-817C5023A47E}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleProject", "gui\ConsoleProject\ConsoleProject.csproj", "{DD6341DB-9400-4119-8A46-8A7FE3D8A259}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,10 +25,6 @@ Global
 		{ADA38464-19EA-42B6-A63B-CE6A88BBDE15}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ADA38464-19EA-42B6-A63B-CE6A88BBDE15}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ADA38464-19EA-42B6-A63B-CE6A88BBDE15}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DD6341DB-9400-4119-8A46-8A7FE3D8A259}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DD6341DB-9400-4119-8A46-8A7FE3D8A259}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DD6341DB-9400-4119-8A46-8A7FE3D8A259}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DD6341DB-9400-4119-8A46-8A7FE3D8A259}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -40,7 +32,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{DB2D9B12-40E7-4844-ABB9-F14E14FEA40B} = {EFF313B2-A3F2-4802-B4D3-C5E86F8B0E58}
 		{ADA38464-19EA-42B6-A63B-CE6A88BBDE15} = {4097C308-8EFB-468D-B40A-2A65F5852473}
-		{DD6341DB-9400-4119-8A46-8A7FE3D8A259} = {527BCEFA-4816-4C00-B707-817C5023A47E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F7F101D9-6EF4-4895-B159-689D8C875202}
