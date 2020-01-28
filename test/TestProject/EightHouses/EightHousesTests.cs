@@ -12,20 +12,44 @@ namespace TestProject.EightHouses
         public void ShouldReturnAnArrayWithStates()
         {
             // Arrange
-            var houses = new SourceProject.EightHouses.EightHouses();
+            IEightHouses houses = new SourceProject.EightHouses.EightHouses();
             var states = GetRandomStates();
             const int days = 5;
 
             // Act
-            var newStates = houses.GetStatesAfterGivenDays(states, days);
-            var newStatesAsIntArray = newStates.Select(s => (int) s).ToArray();
+            var newStates = houses.CellCompete(states, days);
 
             // Assert
             Check.That(newStates.Length).IsNotEqualTo(0);
-            Check.That(newStatesAsIntArray.Length).IsNotEqualTo(0);
         }
 
-        private static State[] GetRandomStates()
+        [TestCase(1,0,0,0,0,1,0,0)]
+        public void TestCaseOne(params int[] initialStates)
+        {
+            // Arrange
+            var expectedStates = new[] {0, 1, 0, 0, 1, 0, 1, 0};
+            const int numberOfDays = 1;
+            IEightHouses houses = new SourceProject.EightHouses.EightHouses();
+
+            // Act
+            var finalStates = houses.CellCompete(initialStates, numberOfDays);
+            Check.That(finalStates).ContainsExactly(expectedStates);
+        }
+
+        [TestCase(1,1,1,0,1,1,1,1)]
+        public void TestCaseTwo(params int[] initialStates)
+        {
+            // Arrange
+            var expectedStates = new[] {0, 0, 0, 0, 0, 1, 1, 0};
+            const int numberOfDays = 2;
+            IEightHouses houses = new SourceProject.EightHouses.EightHouses();
+
+            // Act
+            var finalStates = houses.CellCompete(initialStates, numberOfDays);
+            Check.That(finalStates).ContainsExactly(expectedStates);
+        }
+
+        private static int[] GetRandomStates()
         {
             var states = new State[8];
             var random = new Random();
@@ -34,7 +58,9 @@ namespace TestProject.EightHouses
                 var number = random.Next(0, 2);
                 states[i] = (State) number;
             }
-            return states;
+
+            var statesAsInt = states.Select(state => (int) state).ToArray();
+            return statesAsInt;
         }
     }
 }
