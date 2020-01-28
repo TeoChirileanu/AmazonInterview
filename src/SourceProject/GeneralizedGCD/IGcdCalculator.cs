@@ -2,6 +2,6 @@
 {
     public interface IGcdCalculator
     {
-        int CalculateGcd(int[] numbers);
+        int CalculateGcd(int[] arr);
     }
 }
