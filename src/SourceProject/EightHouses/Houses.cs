@@ -7,10 +7,12 @@ namespace SourceProject.EightHouses
     {
         public static int[] Compete(int[] states, int days)
         {
+            if (states.Length != 8) return new int[0];
+            if (days < 0) return new int[0];
+            if (days == 0) return states;
+
             var dayZeroHouses = GetDayZeroHouses(states);
-
             var dayNHouses = GetDayNHouses(dayZeroHouses, days);
-
             var finalStates = dayNHouses
                 .Select(house => house.GetCurrentDayState())
                 .ToArray();
@@ -42,9 +44,6 @@ namespace SourceProject.EightHouses
 
         private static House[] GetDayNHouses(House[] dayNMinusOneHouses, int numberOfDaysRemaining)
         {
-            if (numberOfDaysRemaining < 0) return new House[0];
-            if (dayNMinusOneHouses.Length != 8) return new House[0];
-
             if (numberOfDaysRemaining == 0) return dayNMinusOneHouses;
 
             var dayNHouses = new House[8];
