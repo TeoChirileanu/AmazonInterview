@@ -23,7 +23,7 @@ namespace TestProject.EightHouses
             Check.That(newStates.Length).IsNotEqualTo(0);
         }
 
-        [TestCase(1,0,0,0,0,1,0,0)]
+        [TestCase(1, 0, 0, 0, 0, 1, 0, 0)]
         public void TestCaseOne(params int[] initialStates)
         {
             // Arrange
@@ -36,7 +36,7 @@ namespace TestProject.EightHouses
             Check.That(finalStates).ContainsExactly(expectedStates);
         }
 
-        [TestCase(1,1,1,0,1,1,1,1)]
+        [TestCase(1, 1, 1, 0, 1, 1, 1, 1)]
         public void TestCaseTwo(params int[] initialStates)
         {
             // Arrange

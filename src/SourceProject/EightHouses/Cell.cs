@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace SourceProject.EightHouses
+﻿namespace SourceProject.EightHouses
 {
     public class Cell
     {
@@ -30,7 +28,7 @@ namespace SourceProject.EightHouses
             //var lowerCellState = Convert.ToBoolean(_lowerCell?._currentState);
             //var upperCellState = Convert.ToBoolean(_upperCell?._currentState);
             //var haveDifferentStates = lowerCellState ^ upperCellState;
-            //return haveDifferentStates ? State.Active : State.Inactive;
+            //return haveDifferentStates ? State.Active : State.Ina
         }
     }
 }

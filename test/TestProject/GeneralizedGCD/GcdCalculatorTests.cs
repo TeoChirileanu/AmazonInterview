@@ -48,7 +48,7 @@ namespace TestProject.GeneralizedGCD
             Check.That(gcd).IsEqualTo(-x);
         }
 
-        [TestCase(2,3,4,5,6)]
+        [TestCase(2, 3, 4, 5, 6)]
         public void ShouldReturnCorrectGcd_WhenSomeNumbersAreGiven(params int[] numbers)
         {
             // Arrange
@@ -61,7 +61,7 @@ namespace TestProject.GeneralizedGCD
             Check.That(gcd).IsEqualTo(1);
         }
 
-        [TestCase(2,4,6,8,10)]
+        [TestCase(2, 4, 6, 8, 10)]
         public void ShouldReturnCorrectGcd_WhenOtherNumbersAreGiven(params int[] numbers)
         {
             // Arrange

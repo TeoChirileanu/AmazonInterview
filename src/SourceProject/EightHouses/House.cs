@@ -1,4 +1,6 @@
-﻿namespace SourceProject.EightHouses
+﻿using System;
+
+namespace SourceProject.EightHouses
 {
     public class House
     {
@@ -27,18 +29,9 @@
             _right = right;
         }
 
-        public int GetNextDayState()
-        {
-            var isLowerActive = _left?._state == 1;
-            var isUpperActive = _right?._state == 1;
-            var areNeighborsActive = isLowerActive & isUpperActive;
+        public int GetCurrentDayState() => _state;
 
-            var isLowerInactive = _left?._state == 0;
-            var isUpperInactive = _right?._state == 0;
-            var areNeighborsInactive = isLowerInactive & isUpperInactive;
-
-            var doNeighborsHaveSameState = areNeighborsActive & areNeighborsInactive;
-            return doNeighborsHaveSameState ? 0 : 1;
-        }
+        public int GetNextDayState() => Convert.ToInt32(
+                Convert.ToBoolean(_left?._state) ^ Convert.ToBoolean(_right?._state));
     }
 }
